@@ -21,6 +21,7 @@ import {
   RightOutlined,
 } from "@ant-design/icons";
 import Paragraph from "antd/lib/typography/Paragraph";
+import Image from "next/image";
 
 import EChart from "@/components/chart/EChart";
 import LineChart from "@/components/chart/LineChart";
@@ -40,7 +41,7 @@ import card from "../../../public/images/info-card-1.jpg";
 function Home() {
   const { Title, Text } = Typography;
 
-  const onChange = (e) => console.log(`radio checked:${e.target.value}`);
+  const onChange = (e: any) => console.log(`radio checked:${e.target.value}`);
 
   const [reverse, setReverse] = useState(false);
 
@@ -170,16 +171,16 @@ function Home() {
       member: (
         <div className="avatar-group mt-2">
           <Tooltip placement="bottom" title="Ryan Tompson">
-            <img className="tootip-img" src={team1} alt="" />
+            <Image className="tootip-img" src={team1} alt="" />
           </Tooltip>
           <Tooltip placement="bottom" title="Romina Hadid">
-            <img className="tootip-img" src={team2} alt="" />
+            <Image className="tootip-img" src={team2} alt="" />
           </Tooltip>
           <Tooltip placement="bottom" title="Alexander Smith">
-            <img className="tootip-img" src={team3} alt="" />
+            <Image className="tootip-img" src={team3} alt="" />
           </Tooltip>
           <Tooltip placement="bottom" title="Jessica Doe">
-            <img className="tootip-img" src={team4} alt="" />
+            <Image className="tootip-img" src={team4} alt="" />
           </Tooltip>
         </div>
       ),
@@ -192,10 +193,10 @@ function Home() {
       member: (
         <div className="avatar-group mt-2">
           <Tooltip placement="bottom" title="Ryan Tompson">
-            <img className="tootip-img" src={team1} alt="" />
+            <Image className="tootip-img" src={team1} alt="" />
           </Tooltip>
           <Tooltip placement="bottom" title="Romina Hadid">
-            <img className="tootip-img" src={team2} alt="" />
+            <Image className="tootip-img" src={team2} alt="" />
           </Tooltip>
         </div>
       ),
@@ -208,13 +209,13 @@ function Home() {
       member: (
         <div className="avatar-group mt-2">
           <Tooltip placement="bottom" title="Ryan Tompson">
-            <img className="tootip-img" src={team1} alt="" />
+            <Image className="tootip-img" src={team1} alt="" />
           </Tooltip>
           <Tooltip placement="bottom" title="Romina Hadid">
-            <img className="tootip-img" src={team1} alt="" />
+            <Image className="tootip-img" src={team1} alt="" />
           </Tooltip>
           <Tooltip placement="bottom" title="Alexander Smith">
-            <img className="tootip-img" src={team3} alt="" />
+            <Image className="tootip-img" src={team3} alt="" />
           </Tooltip>
         </div>
       ),
@@ -227,10 +228,10 @@ function Home() {
       member: (
         <div className="avatar-group mt-2">
           <Tooltip placement="bottom" title="Ryan Tompson">
-            <img className="tootip-img" src={team1} alt="" />
+            <Image className="tootip-img" src={team1} alt="" />
           </Tooltip>
           <Tooltip placement="bottom" title="Romina Hadid">
-            <img className="tootip-img" src={team2} alt="" />
+            <Image className="tootip-img" src={team2} alt="" />
           </Tooltip>
         </div>
       ),
@@ -243,16 +244,16 @@ function Home() {
       member: (
         <div className="avatar-group mt-2">
           <Tooltip placement="bottom" title="Ryan Tompson">
-            <img className="tootip-img" src={team1} alt="" />
+            <Image className="tootip-img" src={team1} alt="" />
           </Tooltip>
           <Tooltip placement="bottom" title="Romina Hadid">
-            <img className="tootip-img" src={team2} alt="" />
+            <Image className="tootip-img" src={team2} alt="" />
           </Tooltip>
           <Tooltip placement="bottom" title="Alexander Smith">
-            <img className="tootip-img" src={team3} alt="" />
+            <Image className="tootip-img" src={team3} alt="" />
           </Tooltip>
           <Tooltip placement="bottom" title="Jessica Doe">
-            <img className="tootip-img" src={team4} alt="" />
+            <Image className="tootip-img" src={team4} alt="" />
           </Tooltip>
         </div>
       ),
@@ -273,10 +274,10 @@ function Home() {
       member: (
         <div className="avatar-group mt-2">
           <Tooltip placement="bottom" title="Ryan Tompson">
-            <img className="tootip-img" src={team1} alt="" />
+            <Image className="tootip-img" src={team1} alt="" />
           </Tooltip>
           <Tooltip placement="bottom" title="Romina Hadid">
-            <img className="tootip-img" src={team2} alt="" />
+            <Image className="tootip-img" src={team2} alt="" />
           </Tooltip>
         </div>
       ),
@@ -319,7 +320,7 @@ function Home() {
     headers: {
       authorization: "authorization-text",
     },
-    onChange(info) {
+    onChange(info: any) {
       if (info.file.status !== "uploading") {
         console.log(info.file, info.fileList);
       }
@@ -412,7 +413,7 @@ function Home() {
                       <tr key={index}>
                         <td>
                           <h6>
-                            <img
+                            <Image
                               src={d.img}
                               alt=""
                               className="avatar-sm mr-10"
@@ -482,7 +483,7 @@ function Home() {
         <Row gutter={[24, 0]}>
           <Col xs={24} md={12} sm={24} lg={12} xl={14} className="mb-24">
             <Card bordered={false} className="criclebox h-full">
-              <Row gutter>
+              <Row>
                 <Col
                   xs={24}
                   md={12}
@@ -517,7 +518,7 @@ function Home() {
                   className="col-img"
                 >
                   <div className="ant-cret text-right">
-                    <img src={card} alt="" className="border10" />
+                    <Image src={card} alt="" className="border10" />
                   </div>
                 </Col>
               </Row>
